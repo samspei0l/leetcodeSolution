@@ -22,6 +22,7 @@ the size of array and set our element to arr[i] and count to 1. After that
 we run a while loop for linearSearch until it's false from arr to element+1 i.e
 next element increased by 1, and we increase our counter by 1 if the condition
 is true then we take max of longest and count and print the longest.
+TC - O(N*N) and SC - O(1)
 '''
 
 
