@@ -45,10 +45,50 @@ def leetcode2149Opt(arr):
     print(arr)
 
 
+'''
+There is another variety for this question.
+Where an array has more positive than negative numbers or vice-versa
+for example arr[2,3,-1,-2,4,5]. Here as we can see there are more positive
+numbers than negative numbers and we have to the same operation on the array
+were we will write the array in positive negative form and add remaining values
+at the end.
+'''
+
+
+def leetcode2149Variety(arr):
+    positive = []
+    negative = []
+    for i in range(len(arr)):
+        if arr[i] < 0:
+            negative.append(arr[i])
+        else:
+            positive.append(arr[i])
+
+    if len(positive) > len(negative):
+        for i in range(len(negative)):
+            arr[2*i] = positive[i]
+            arr[2*i+1] = negative[i]
+        index = len(negative) * 2
+        for i in range(len(negative), len(positive)):
+            arr[index] = positive[i]
+            index += 1
+    else:
+        for i in range(len(positive)):
+            arr[2*i] = positive[i]
+            arr[2*i+1] = negative[i]
+        index = len(positive)
+        for i in range(len(positive), len(negative)):
+            arr[index] = negative[i]
+            index += 1
+
+    print(arr)
+
+
 def main():
-    arr = [3, 1, -2, -5, 2, -4]
+    arr = [-1, 2, 3, 4, -3, 1]
     # leetcode2149(arr)
-    leetcode2149Opt(arr)
+    # leetcode2149Opt(arr)
+    leetcode2149Variety(arr)
 
 
 if __name__ == "__main__":
