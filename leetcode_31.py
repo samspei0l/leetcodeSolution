@@ -17,7 +17,7 @@ the array in reverse sorted way.
 def leetcode31Optimal(arr):
     n = len(arr)
     index = -1
-    for i in range(n-2, 0, -1):
+    for i in range(n-2, -1, -1):
         if arr[i] < arr[i+1]:
             index = i
             break
