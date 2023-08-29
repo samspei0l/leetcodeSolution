@@ -68,7 +68,7 @@ def leetcode128Better(arr):
 
 '''
 Optimal Solution: For optimal solution we use set data structure.
-We first all the element from array to set data structure. Once done
+We first add all the element from array to a set data structure. Once done
 we check if previous element of current iteration in set exists or not
 if it exits then we move to next iteration in set and if it doesn't exits
 then we change our counter to 1 and the element will be the value at the
