@@ -22,6 +22,7 @@ the size of array and set our element to arr[i] and count to 1. After that
 we run a while loop for linearSearch until it's false from arr to element+1 i.e
 next element increased by 1, and we increase our counter by 1 if the condition
 is true then we take max of longest and count and print the longest.
+TC - O(N*N) and SC - O(1)
 '''
 
 
@@ -67,7 +68,7 @@ def leetcode128Better(arr):
 
 '''
 Optimal Solution: For optimal solution we use set data structure.
-We first all the element from array to set data structure. Once done
+We first add all the element from array to a set data structure. Once done
 we check if previous element of current iteration in set exists or not
 if it exits then we move to next iteration in set and if it doesn't exits
 then we change our counter to 1 and the element will be the value at the
