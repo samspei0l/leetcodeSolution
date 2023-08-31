@@ -63,7 +63,7 @@ def leetcode169Optimal(nums):
 
 
 def main():
-    nums = [2, 2, 1, 1, 1, 2, 2]
+    nums = [1, 2]
     # leetcode169Brute(nums)
     # leetcode169Better(nums)
     leetcode169Optimal(nums)
